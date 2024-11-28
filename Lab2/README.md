@@ -186,8 +186,8 @@ http://xpather.com/
 ```
  e)      Собственный запрос с использование минимум двух функций count(), contains(), position(), sum() и др. Получить общее количество актеров в фильмах с кассовыми сборами выше 500 млн и вывести все названия фильмов, в которых участвует актер с именем "Leonardo DiCaprio":
   ```xml
-       sum(//movie[box_office > 500000000]/count(cast/actor))
-       //movie[cast/actor="Leonardo DiCaprio"]/title
+       sum(//movie[box_office > 500000000 and cast/actor="Leonardo DiCaprio"]/count(cast/actor))
+
 ```
 3.  Описать DTD схему для разработанного формата. Произвести валидацию xml-документа (0,5 балла). Валидация в вижуалке
 ```xml
